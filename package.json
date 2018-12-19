@@ -2,9 +2,12 @@
   "name": "reducr",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watchAll",
+    "start": "node server.js",
+    "lint": "eslint '**/*.js'",
+    "dev": "nodemon server.js"
   },
   "keywords": [
     "reducr"
@@ -14,5 +17,22 @@
     "url": "https://github.com/iancl/reducr.git"
   },
   "author": "Ian Calderon",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "helmet": "^3.15.0",
+    "mime": "^2.4.0",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.10.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.2",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "jest": "^23.6.0",
+    "nodemon": "^1.18.9"
+  }
 }
